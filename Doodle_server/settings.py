@@ -25,7 +25,9 @@ SECRET_KEY = 'n6(jkx6=^sp$_ee+z*qd(wwaye802u(p89do8h34v()scw0g_l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.amazonaws.com',
+]
 
 
 # Application definition
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'Doodle_server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'doodle_server',
+        'USER': 'admin',
+        'PASSWORD': 'rlagkwjd0318',
+        'HOST': 'doodle-server.cicwjfqhynn6.ap-northeast-2.rds.amazonaws.com',
+        'PORT': '3306'
     }
 }
 
