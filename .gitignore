@@ -1,0 +1,6 @@
+.idea/
+/venv/
+/Doodle_server/secrets.json
+/Doodle_server/__pycache__/
+*.pyc
+__pycache__
