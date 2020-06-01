@@ -9,7 +9,7 @@ dir = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), 
 with open(dir, 'rb') as secret_file:
     secrets = json.load(secret_file)
 
-ALLOWED_HOSTS = secrets['ALLOWED_HOST']
+ALLOWED_HOSTS = secrets['ALLOWED_HOSTS']
 
 DATABASES = {
     'default': secrets['DB_SETTINGS']
