@@ -3,7 +3,7 @@ Description=uWSGI service
 After=syslog.target
 
 [Service]
-ExecStart=/home/ubuntu/.pyenv/versions/3.6.2/envs/uwsgi-env/bin/uwsgi -i /home/ubuntu/srv/Doodle-server/.config/uwsgi/mysite.ini
+ExecStart=/home/ubuntu/.pyenv/versions/uwsgi-env/bin/uwsgi -i /home/ubuntu/srv/Doodle-server/.config/uwsgi/mysite.ini
 
 Restart=always
 KillSignal=SIGQUIT
