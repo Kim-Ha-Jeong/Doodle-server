@@ -7,7 +7,7 @@ from .base import *
 DEBUG = False  # 꼭 필요합니다.
 dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-with open(dir, 'secrets.json', 'rb') as secret_file:
+with open(dir, 'secrets.json', 'rb', encoding = 'utf-8') as secret_file:
     secrets = json.load(secret_file)
 
 ALLOWED_HOSTS = secrets['ALLOWED_HOST']
