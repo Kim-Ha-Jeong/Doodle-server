@@ -1,6 +1,6 @@
 .idea/
 /venv/
-/config/__pycache__/
+api/__pycache__
 *.pyc
 __pycache__
 /api/migrations/
