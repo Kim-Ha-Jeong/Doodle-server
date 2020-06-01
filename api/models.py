@@ -10,3 +10,10 @@ class Test(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Test2(models.Model):
+    tel = models.CharField(max_length=20, unique=True)
+
+    def __str__(self):
+        return self.tel
