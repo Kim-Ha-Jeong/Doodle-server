@@ -114,12 +114,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = '/home/ubuntu/Doodle-server/static'
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/rest_framework')
-
-STATICFILES_DIRS = [
-    ("js", os.path.join(STATIC_ROOT, 'js')),
-    ("css", os.path.join(STATIC_ROOT, 'css')),
-    ("img", os.path.join(STATIC_ROOT, 'img')),
-    ("fonts", os.path.join(STATIC_ROOT, 'fonts')),
-]
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static')
+)
