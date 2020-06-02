@@ -4,4 +4,3 @@ api/__pycache__
 *.pyc
 __pycache__
 /api/migrations/
-.static_root/
