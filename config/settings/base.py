@@ -125,6 +125,6 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_URL = '/uploads/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_ROOT = os.path.join(BASE_DIR)
 
 CORS_ORIGIN_ALLOW_ALL = True
