@@ -37,7 +37,7 @@ class User(AbstractBaseUser):
     name = models.CharField(max_length=20)
     email = models.EmailField(max_length=50)
     tel = models.CharField(max_length=30)
-    doodle = models.ImageField()
+    doodle = models.ImageField(upload_to='uploads/')
 
     class Meta:
         verbose_name = 'user'
