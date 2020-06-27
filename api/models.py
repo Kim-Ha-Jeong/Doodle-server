@@ -5,7 +5,7 @@ from django.db import models
 class UserManager(BaseUserManager):
     user_in_migrations = True
 
-    def _create_user(self, name, email, tel, doodle, password=None):
+    def _create_user(self, name, email, tel, doodle):
         if not tel:
             raise ValueError('연락처를 입력해주세요')
         if not name:
@@ -14,19 +14,9 @@ class UserManager(BaseUserManager):
             name=name,
             email=self.normalize_email(email),
             tel=tel,
-            doodle=doodle
+            doodle=doodle,
         )
-        user.save(using=self._db)
-        return user
-
-    def create_admin(self, email, password):
-        user = self.create_user(
-            email=self.normalize_email(email),
-            password=password,
-        )
-        user.is_admin = True
-        user.is_superuser = True
-        user.is_staff = True
+        user.set_unusable_password()
         user.save(using=self._db)
         return user
 
