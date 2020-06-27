@@ -3,6 +3,7 @@ from django.db import models
 
 
 class UserManager(BaseUserManager):
+    exclude = ('password', 'last_login')
     user_in_migrations = True
 
     def _create_user(self, name, email, tel, doodle):
@@ -16,7 +17,6 @@ class UserManager(BaseUserManager):
             tel=tel,
             doodle=doodle,
         )
-        user.set_unusable_password()
         user.save(using=self._db)
         return user
 
