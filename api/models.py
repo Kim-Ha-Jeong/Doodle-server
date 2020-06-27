@@ -2,14 +2,10 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 from django.db import models
 
 
-class Photo(models.Model):
-    doodle = models.ImageField()
-
-
 class UserManager(BaseUserManager):
     user_in_migrations = True
 
-    def _create_user(self, name, email, tel, photo_id, password=None):
+    def _create_user(self, name, email, tel, doodle, password=None):
         if not tel:
             raise ValueError('연락처를 입력해주세요')
         if not name:
@@ -18,7 +14,7 @@ class UserManager(BaseUserManager):
             name=name,
             email=self.normalize_email(email),
             tel=tel,
-            photo_id=photo_id
+            doodle=doodle
         )
         user.save(using=self._db)
         return user
@@ -41,10 +37,7 @@ class User(AbstractBaseUser):
     name = models.CharField(max_length=20)
     email = models.EmailField(max_length=50)
     tel = models.CharField(max_length=30)
-    photo_id = models.ForeignKey(
-        Photo,
-        on_delete=models.CASCADE
-    )
+    doodle = models.ImageField()
 
     class Meta:
         verbose_name = 'user'

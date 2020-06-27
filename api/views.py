@@ -12,11 +12,6 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
 
-class PhotoViewSet(viewsets.ModelViewSet):
-    queryset = Photo.objects.all()
-    serializer_class = PhotoSerializer
-
-
 class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
