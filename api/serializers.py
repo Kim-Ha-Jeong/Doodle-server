@@ -2,13 +2,19 @@ from rest_framework import serializers
 from api.models import *
 
 
-class TestSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Test
+        model = User
         fields = '__all__'
 
 
-class Test2Serializer(serializers.ModelSerializer):
+class PhotoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Test2
+        model = Photo
+        fields = '__all__'
+
+
+class ReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
         fields = '__all__'
