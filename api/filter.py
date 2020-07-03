@@ -6,13 +6,14 @@ class ProduceFilter(FilterSet):
     order = filters.CharFilter(method='produce_filter')
     #o_phone_num = filters.CharFilter(method='produce_filter')
 
-    def produce_filter(self, queryset, value):
-        order = str(self.request.POST['order'])
+    def produce_filter(self, order, queryset, value):
+        order = self.request.query_params.get(order, None)
         #o_phone_num = str(self.request.POST['o_phone_num'])
         if order is not None: #and o_phone_num is not None:
             queryset = queryset.filter(order__icontains=value)
         print("성공")
+        return queryset
 
     class Meta:
         model = Produce
-        fields = ['order', 'o_phone_num']
+        fields = ['order']
