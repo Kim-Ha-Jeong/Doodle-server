@@ -1,16 +1,13 @@
-from django.http import Http404
-from django.shortcuts import render
 
 # Create your views here.
-from django.shortcuts import render
+from django.http import Http404
+
 from rest_framework import viewsets
 from rest_framework.generics import get_object_or_404
 from rest_framework.parsers import MultiPartParser
 from rest_framework.response import Response
 
-from api.models import *
 from api.serializers import *
-from rest_framework.permissions import IsAdminUser
 
 
 class ReviewViewSet(viewsets.ModelViewSet):
