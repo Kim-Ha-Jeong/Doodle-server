@@ -4,5 +4,13 @@ from .models import Review, Produce
 
 # Register your models here.
 
-admin.site.register(Review)
-admin.site.register(Produce)
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('name', 'star')
+
+
+class ProduceAdmin(admin.ModelAdmin):
+    list_display = ('order', 'o_phone_num', 'receiver', 'r_phone_num')
+
+
+admin.site.register(Review, ReviewAdmin)
+admin.site.register(Produce, ProduceAdmin)
