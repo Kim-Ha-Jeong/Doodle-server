@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render
 
 # Create your views here.
@@ -29,7 +30,7 @@ class ProduceViewSet(viewsets.ModelViewSet):
 
         product = get_object_or_404(Produce, order=order, o_phone_num=o_phone_num)
         if product is None:
-            return print("error")
+            raise Http404("No data")
         else:
             serializer = ProduceSerializer(product)
             return Response(serializer.data)
