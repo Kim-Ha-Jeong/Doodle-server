@@ -16,6 +16,7 @@ class Review(models.Model):
 class Produce(models.Model):
     doodle = models.ImageField()
     redesign = models.IntegerField()
+    amount = models.IntegerField()
     receiver = models.CharField(max_length=20)
     r_phone_num = models.CharField(max_length=20)
     post_code = models.CharField(max_length=100)
