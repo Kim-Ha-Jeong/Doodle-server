@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'drf_yasg',
     'corsheaders',
-    'django_filters'
 ]
 
 MIDDLEWARE = [
