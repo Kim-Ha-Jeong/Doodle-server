@@ -14,7 +14,7 @@ class Review(models.Model):
 
 
 class Produce(models.Model):
-    doodle = models.ImageField()
+    doodle = models.ImageField(null=True)
     redesign = models.IntegerField()
     amount = models.IntegerField()
     receiver = models.CharField(max_length=20)
