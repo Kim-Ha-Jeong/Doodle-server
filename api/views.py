@@ -23,3 +23,4 @@ class ProduceViewSet(viewsets.ModelViewSet):
     parser_classes = [MultiPartParser]
     filter_backends = [DjangoFilterBackend]
     filterset_class = ProduceFilter
+    permission_classes = [IsAdminUser]
