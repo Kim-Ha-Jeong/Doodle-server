@@ -5,6 +5,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.generics import get_object_or_404
 from rest_framework.parsers import MultiPartParser
+from rest_framework.response import Response
 
 from api.models import *
 from api.serializers import *
@@ -30,4 +31,5 @@ class ProduceViewSet(viewsets.ModelViewSet):
         if product is None:
             return print("error")
         else:
-            return product
+            serializer = ProduceSerializer(product)
+            return Response(serializer.data)
