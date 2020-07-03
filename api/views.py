@@ -5,13 +5,20 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from api.models import *
 from api.serializers import *
+from rest_framework.permissions import IsAdminUser
 
 
 class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
+    permission_classes = [
+        IsAdminUser,
+    ]
 
 
 class ProduceViewSet(viewsets.ModelViewSet):
     queryset = Produce.objects.all()
     serializer_class = ProduceSerializer
+    permission_classes = [
+        IsAdminUser,
+    ]
