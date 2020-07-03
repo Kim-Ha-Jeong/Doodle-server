@@ -16,4 +16,4 @@ class ProduceFilter(FilterSet):
 
     class Meta:
         model = Produce
-        fields = '__all__'
+        fields = ['order']
