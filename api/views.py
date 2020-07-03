@@ -7,11 +7,11 @@ from api.models import *
 from api.serializers import *
 
 
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
-
 class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
+
+
+class ProduceViewSet(viewsets.ModelViewSet):
+    queryset = Produce.objects.all()
+    serializer_class = ProduceSerializer
