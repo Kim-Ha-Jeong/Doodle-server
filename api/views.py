@@ -22,7 +22,6 @@ class ProduceViewSet(viewsets.ModelViewSet):
     queryset = Produce.objects.all()
     serializer_class = ProduceSerializer
     parser_classes = [MultiPartParser]
-    permission_classes = [IsAdminUser]
 
     def list(self, request, *args, **kwargs):
         order = request.query_params.get('order')
