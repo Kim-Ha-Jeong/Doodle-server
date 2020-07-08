@@ -20,7 +20,8 @@ class ProduceViewSet(viewsets.ModelViewSet):
     serializer_class = ProduceSerializer
     parser_classes = [MultiPartParser]
 
-    def list(self, request, *args, **kwargs):
+
+"""def list(self, request, *args, **kwargs):
         order = request.query_params.get('order')
         o_phone_num = request.query_params.get('o_phone_num')
 
@@ -29,4 +30,4 @@ class ProduceViewSet(viewsets.ModelViewSet):
             raise Http404("No data")
         else:
             serializer = ProduceSerializer(product)
-            return Response(serializer.data)
+            return Response(serializer.data)"""
