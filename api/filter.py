@@ -9,5 +9,5 @@ class ProduceFilter(FilterSet):
     def produce_order_filter(self, queryset, order, value):
         order = self.request.query_params.get(order, value)
         if order is not None:
-            queryset = queryset.filter(name__icontains=value)
+            queryset = queryset.filter(order__icontains=value)
         return queryset

@@ -2,6 +2,7 @@
 # Create your views here.
 from rest_framework import viewsets
 from rest_framework.parsers import MultiPartParser
+from django_filters.rest_framework import DjangoFilterBackend
 from api.filter import *
 
 from api.serializers import *
@@ -16,6 +17,7 @@ class ProduceViewSet(viewsets.ModelViewSet):
     queryset = Produce.objects.all()
     serializer_class = ProduceSerializer
     parser_classes = [MultiPartParser]
+    filter_backends = [DjangoFilterBackend]
     filterset_class = ProduceFilter
 
 
