@@ -4,7 +4,7 @@ from api.models import *
 
 class ProduceFilter(FilterSet):
     order = filters.CharFilter(method='produce_order_filter')
-    o_phone_num = filters.CharFilter(method='produce_order_filter')
+    o_phone_num = filters.CharFilter(method='produce_phone_filter')
 
     def produce_order_filter(self, queryset, order, value):
         order = self.request.query_params.get(order, value)
