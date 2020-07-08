@@ -1,11 +1,8 @@
 
 # Create your views here.
-from django.http import Http404
-
 from rest_framework import viewsets
-from rest_framework.generics import get_object_or_404
 from rest_framework.parsers import MultiPartParser
-from rest_framework.response import Response
+from api.filter import *
 
 from api.serializers import *
 
@@ -19,6 +16,7 @@ class ProduceViewSet(viewsets.ModelViewSet):
     queryset = Produce.objects.all()
     serializer_class = ProduceSerializer
     parser_classes = [MultiPartParser]
+    filterset_class = ProduceFilter
 
 
 """def list(self, request, *args, **kwargs):
