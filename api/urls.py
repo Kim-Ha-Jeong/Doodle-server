@@ -6,6 +6,7 @@ from django.conf import settings
 router = routers.DefaultRouter()
 router.register(r'review', ReviewViewSet)
 router.register(r'produce', ProduceViewSet)
+router.register(r'landing', LandingViewSet)
 
 urlpatterns = router.urls
 
