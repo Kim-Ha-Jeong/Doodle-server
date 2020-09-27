@@ -31,3 +31,8 @@ class ProduceViewSet(viewsets.ModelViewSet):
         else:
             serializer = ProduceSerializer(product)
             return Response(serializer.data)"""
+
+
+class LandingViewSet(viewsets.ModelViewSet):
+    queryset = Landing.objects.all()
+    serializer_class = LandingSerializer

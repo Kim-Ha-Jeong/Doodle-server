@@ -24,3 +24,10 @@ class Produce(models.Model):
     order = models.CharField(max_length=20)
     o_phone_num = models.CharField(max_length=20)
     email = models.CharField(max_length=30)
+
+
+class Landing(models.Model):
+    doodle = models.ImageField(null=True)
+    age = models.CharField(max_length=5)
+    gender = models.CharField(max_length=5)
+    email = models.CharField(max_length=30)
