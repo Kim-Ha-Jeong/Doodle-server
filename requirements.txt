@@ -11,7 +11,7 @@ cycler==0.10.0
 distlib==0.3.0
 Django==3.0.7
 django-cors-headers==3.4.0
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 djangorestframework-filters==0.11.1
 docopt==0.6.2
 drf-yasg==1.17.1
