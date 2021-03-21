@@ -21,7 +21,7 @@ httpie==2.0.0
 idna==2.9
 inflection==0.4.0
 itypes==1.2.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 Js2Py==0.68
 kiwisolver==1.1.0
 Markdown==3.2.1
