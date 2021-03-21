@@ -22,21 +22,20 @@
 <img src="https://user-images.githubusercontent.com/46347830/111909872-54625e80-8aa2-11eb-9a61-06ce24681a45.JPG" width="200px" height="450px"/>
 <img src="https://user-images.githubusercontent.com/46347830/111909866-52000480-8aa2-11eb-99e0-bc6a8a5d013a.JPG" width="200px" height="450px"/>
 <img src="https://user-images.githubusercontent.com/46347830/111909870-53313180-8aa2-11eb-8970-eab53a714bff.png" width="200px" height="450px"/>
-</div>  
-주문 과정은 총 4단계에 걸쳐서 진행된다.  
+</div><br/>  
+주문 과정은 총 4단계에 걸쳐서 진행된다.</br>
 Step 1은 그림 업로드 하기<br/>
 Step 2은 리디자인 단계 선택하기<br/>
 Step 3은 배송지와 고객 정보 입력하기<br/> 
 Step 4은 결제하기<br/>
 이 과정을 모두 거치면 주문이 완료된다.  
 <br/>
-
- 
+<br/>
 
 **4. 마이 페이지**  
 <img src="https://user-images.githubusercontent.com/46347830/111910449-bf149980-8aa4-11eb-8c22-bf89ad201242.JPG" width="25%" />  
- 자신이 주문한 물건의 배송 상태와 자주하는 질문 등을 볼 수 있다.
- <br/>
+자신이 주문한 물건의 배송 상태와 자주하는 질문 등을 볼 수 있다.
+<br/>
 
 ### 두들 링크
 네이버 스마트 스토어 : https://smartstore.naver.com/my_doodle  
