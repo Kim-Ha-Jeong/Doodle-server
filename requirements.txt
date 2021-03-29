@@ -35,7 +35,7 @@ pbs==0.110
 Pillow==7.1.2
 pipwin==0.4.8
 PyAudio==0.2.11
-Pygments==2.6.1
+Pygments==2.7.4
 pyjsparser==2.7.1
 pyparsing==2.4.6
 PyPrind==2.11.2
