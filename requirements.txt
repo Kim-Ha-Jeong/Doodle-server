@@ -29,7 +29,7 @@ MarkupSafe==1.1.1
 matplotlib==3.2.1
 mysqlclient==1.4.6
 nltk==3.4.5
-numpy==1.18.2
+numpy==1.22.0
 packaging==20.3
 pbs==0.110
 Pillow==7.1.2
